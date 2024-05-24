@@ -1,47 +1,111 @@
-// pages/_products.scss
+// products.scss
 
 .productsSection {
-  padding: 20px;
-
-  .col-md-4 {
-      margin-bottom: 30px; /* Adjust the margin-bottom as needed */
-  }
-
-  .equal-height-row {
+    padding: 20px;
+  
+    .card {
+      position: relative;
+      width: 100%;
+      height: 350px; // Increased height to accommodate longer descriptions
+      margin: auto;
+      perspective: 1000px; // Add perspective
+      margin-bottom: 20px; // Space between cards
+      box-sizing: border-box; // Ensure padding and border are included in the element's total width and height
+  
+      &-front,
+      &-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        transition: transform 0.6s ease-in-out;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        box-sizing: border-box; // Ensure padding and border are included in the element's total width and height
+        padding: 20px; // Added padding to ensure content stays inside
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center; // Center align text
+      }
+  
+      &-front {
+        background: #fff;
+        z-index: 2;
+        transform: rotateY(0deg);
+      }
+  
+      &-back {
+        background: #007bff;
+        color: #fff;
+        transform: rotateY(180deg);
+      }
+  
+      &:hover {
+        & .card-front {
+          transform: rotateY(-180deg);
+          cursor: pointer;
+        }
+  
+        & .card-back {
+          transform: rotateY(0deg);
+        }
+      }
+    }
+  
+    .col-md-4 {
+      margin-bottom: 30px; // Adjust the margin-bottom as needed
+    }
+  
+    .equal-height-row {
       display: flex;
       flex-wrap: wrap;
-  }
-
-  .productItem {
+    }
+  
+    .productItem {
       background: #fff;
       border: 1px solid #ddd;
-      margin-bottom: 20px; /* Add margin between .productItem elements */
-      padding: 20px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-      display: flex; /* Make .productItem a flex container */
-      flex-direction: column; /* Arrange child elements vertically */
-      justify-content: space-between; /* Align child elements vertically */
-      height: 100%; /* Ensure .productItem takes up full height */
-      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition for transform and box-shadow */
-
+      margin-bottom: 20px; // Add margin between .productItem elements
+      padding: 0; // Remove padding to integrate card structure
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      display: flex; // Make .productItem a flex container
+      flex-direction: column; // Arrange child elements vertically
+      justify-content: space-between; // Align child elements vertically
+      height: 350px; // Increased height to accommodate longer descriptions
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; // Smooth transition for transform and box-shadow
+      position: relative;
+      perspective: 1000px; // Add perspective for 3D effect
+  
       &:hover {
-          transform: translateY(-10px); /* Move up on hover */
-          box-shadow: 0 10px 20px rgba(0,0,0,0.2); /* Darker shadow on hover */
+        transform: translateY(-10px); // Move up on hover
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); // Darker shadow on hover
       }
-
+  
       img {
-          max-width: 100%;
-          height: auto;
-          margin-bottom: auto; /* Align image to the middle */
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 10px; // Add margin below image
       }
-
+  
       h2 {
-          margin-top: auto; /* Align h2 to the bottom */
+        font-size: 1.5rem; // Reduce font size
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding: 0 10px; // Add padding for better spacing
+        box-sizing: border-box; // Ensure padding is included in the element's total width and height
       }
-
+  
       p {
-          margin-top: 0; /* Remove default margin to avoid extra space */
-          margin-bottom: 0; /* Remove default margin to avoid extra space */
+        margin-top: 0; // Remove default margin to avoid extra space
+        margin-bottom: 0; // Remove default margin to avoid extra space
+        padding: 10px; // Add padding for better spacing
+        box-sizing: border-box; // Ensure padding is included in the element's total width and height
+        text-align: center; // Center align text
+        overflow: hidden; // Ensure text does not overflow
       }
+    }
   }
-}
+  
+
+// end of _products.scss

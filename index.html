@@ -32,41 +32,40 @@
 <body>
     <header class="container-fluid" id="header">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div id="logo">
-                <a class="navbar-brand" href="#"> 
-                    <!-- Added alt text for better accessibility and SEO -->
-                    <img src="./resources/logo.png" alt="Bachino Seguros Logo" class="img-fluid" id="logo"> 
-                </a>
-            </div>
+            <div class="container">
+                <div id="logo">
+                    <a class="navbar-brand" href="#"> 
+                        <img src="./resources/logo.png" alt="Bachino Seguros Logo" class="img-fluid" id="logo"> 
+                    </a>
+                </div>
 
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <!-- Added descriptive text to links for better SEO -->
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./pages/products.html">Our Products</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./pages/aboutUs.html">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./pages/contactUs.html">Contact Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./pages/faq.html">FAQ</a>
-                    </li>
-                </ul>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/products.html">Our Products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/aboutUs.html">About Me</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/contactUs.html">Contact Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/faq.html">FAQ</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
     </header>
     <main>
         <div class="headline">
-            <!-- Added descriptive text to h1 for better SEO -->
             <h1 class="text-center">Welcome to Bachino Seguros</h1>
         </div>
         
@@ -76,29 +75,50 @@
                     <div class="videoWrapper">
                         <iframe src="https://www.youtube.com/embed/CtxVF5Fe15A?si=blv0AWCtxvaIbdnk"  title="Introduction to Bachino Seguros - YouTube Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </div>
-                    
                 </div>
             </div>
         </section>
+
+
         <section class="featuredList container py-4">
+            <div class="col-12">
+                <h2 class="text-center mb-4">Our Featured Products</h2>
+                <p class="text-center">At Bachino Seguros, we are dedicated to providing comprehensive insurance solutions to protect what matters most to you. Whether you need coverage for your car, home, or life, our expert team is here to help you find the best policy that suits your needs. Trust us to safeguard your future with reliable and affordable insurance plans tailored just for you.</p>
+            </div>
+           
             <div class="row">
                 <div class="col-md-4 text-center">
-                    <!-- Added alt text for better accessibility and SEO -->
-                    <img src="./resources/carinssurance.png" alt="Car Insurance" class="img-fluid mb-2">
-                    <h2>Car Insurance</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur</p>
+                    <div class="card">
+                        <div class="card-front">
+                            <img src="./resources/carinssurance.png" alt="Car Insurance" class="img-fluid mb-2">
+                            <h2>Car Insurance</h2>
+                        </div>
+                        <div class="card-back">
+                            <p>Get comprehensive coverage for your vehicle. Our car insurance offers protection against accidents, theft, and more.</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-4 text-center">
-                    <!-- Added alt text for better accessibility and SEO -->
-                    <img src="./resources/Insurance2.png" alt="Home Insurance" class="img-fluid mb-2">
-                    <h2>Home Insurance</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur</p>
+                    <div class="card">
+                        <div class="card-front">
+                            <img src="./resources/Insurance2.png" alt="Home Insurance" class="img-fluid mb-2">
+                            <h2>Home Insurance</h2>
+                        </div>
+                        <div class="card-back">
+                            <p>Protect your home with our extensive insurance policies. Coverage includes natural disasters, theft, and more.</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-4 text-center">
-                    <!-- Added alt text for better accessibility and SEO -->
-                    <img src="./resources/lifeInsurance.png" alt="Life Insurance" class="img-fluid mb-2">
-                    <h2>Life Insurance</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur</p>
+                    <div class="card">
+                        <div class="card-front">
+                            <img src="./resources/lifeInsurance.png" alt="Life Insurance" class="img-fluid mb-2">
+                            <h2>Life Insurance</h2>
+                        </div>
+                        <div class="card-back">
+                            <p>Ensure your loved ones are taken care of with our life insurance plans. Choose the coverage that best suits your needs.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -110,7 +130,7 @@
                     <nav class="nav justify-content-center">
                         <a class="nav-link" href="#">Home</a>
                         <a class="nav-link" href="./pages/products.html">Our Products</a>
-                        <a class="nav-link" href="./pages/aboutUs.html">About Us</a>
+                        <a class="nav-link" href="./pages/aboutUs.html">About Me</a>
                         <a class="nav-link" href="./pages/contactUs.html">Contact Me</a>
                         <a class="nav-link" href="./pages/faq.html">FAQ</a>
                     </nav>

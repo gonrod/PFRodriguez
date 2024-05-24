@@ -1,6 +1,6 @@
-// FAQ page styles
+// _contact.scss
 .faqSection {
-  margin-top: rem(20);
+  margin-top: 1.25rem;
   text-align: center;
 
   .faqList {
@@ -10,31 +10,74 @@
     .faqCard {
       background: #fff;
       border: 1px solid #ddd;
-      border-radius: rem(8);
-      box-shadow: 0 rem(2) rem(4) rgba(0, 0, 0, 0.1);
-      padding: rem(20);
-      margin-bottom: rem(20);
+      border-radius: 0.5rem;
+      box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+      margin-bottom: 1.25rem;
       text-align: left;
-      @include transition(transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out);
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 
       &:hover {
         transform: translateY(-5px);
-        box-shadow: 0 rem(6) rem(12) rgba(0, 0, 0, 0.1);
+        box-shadow: 0 0.375rem 0.75rem rgba(0, 0, 0, 0.1);
       }
 
-      h3 {
-        margin-bottom: rem(10);
+      .card-header {
+        cursor: pointer;
+        padding: 1rem;
+        background-color: #f8f9fa;
+        border-bottom: 1px solid #ddd;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: #e9ecef;
+        }
+
+        h3 {
+          margin: 0;
+          font-size: 1.25rem; // Adjusted font size for better readability
+          font-weight: 600; // Slightly bold for emphasis
+          color: #007bff; // Matching the primary color theme
+          transition: color 0.3s ease;
+
+          &:hover {
+            color: #0056b3; // Darker shade on hover for better visual feedback
+          }
+        }
       }
 
-      hr {
-        margin: rem(10) 0;
-        border: 0;
-        border-top: 1px solid #ddd;
-      }
+      .card-body {
+        padding: 1.25rem;
 
-      p {
-        margin-bottom: 0;
+        .collapse.show & {
+          border-top: 1px solid #ddd;
+        }
       }
     }
   }
+
+  ul {
+    padding-left: 20px;
+    list-style-type: disc;
+  }
+
+  li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+  }
+
+  a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: normal; // Ensure the font weight is normal to match surrounding text
+    padding: 0; // Remove any extra padding
+    border: none; // Remove border if any
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: #0056b3;
+      text-decoration: underline;
+    }
+  }
 }
+
+// End of _faq.scss

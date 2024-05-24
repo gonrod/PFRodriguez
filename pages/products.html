@@ -19,7 +19,6 @@
 
     <!-- External CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <!-- <link href="../styles/styles.css" rel="stylesheet" />-->
     <link href="../styles/main.css" rel="stylesheet" />
 
     <!-- External JS -->
@@ -31,99 +30,130 @@
 <body>
     <header class="container-fluid" id="header">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div id="logo">
-                <a class="navbar-brand" href="../index.html"> 
-                    <!-- Added alt text for better accessibility and SEO -->
-                    <img src="../resources/logo.png" alt="Bachino Seguros Logo" class="img-fluid" id="logo"> 
-                </a>
-            </div>
+            <div class="container">
+                <div id="logo">
+                    <a class="navbar-brand" href="../index.html"> 
+                        <img src="../resources/logo.png" alt="Bachino Seguros Logo" class="img-fluid" id="logo"> 
+                    </a>
+                </div>
 
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <!-- Added descriptive text to links for better SEO -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="../index.html">Home</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Our Products</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./aboutUs.html">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./contactUs.html">Contact Me</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./faq.html">FAQ</a>
-                    </li>
-                </ul>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Our Products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./aboutUs.html">About Me</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./contactUs.html">Contact Me</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./faq.html">FAQ</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
     </header>
     <main>
-        <section class="container productsSection">
+        <section class="productsSection container">
             <h1 class="text-center">Our Insurance Products</h1>
             <div class="row equal-height-row">
                 <div class="col-md-4">
-                    <div class="productItem">
-                        <img src="../resources/carinssurance.png" alt="Car Insurance" class="img-fluid">
-                        <h2>Car Insurance</h2>
-                        <p>Comprehensive car insurance for your vehicle.</p>
+                    <div class="productItem card">
+                        <div class="card-front">
+                            <img src="../resources/carinssurance.png" alt="Car Insurance" class="img-fluid mb-2">
+                            <h2>Car Insurance</h2>
+                        </div>
+                        <div class="card-back">
+                            <p>Our car insurance provides comprehensive coverage for your vehicle, protecting you against accidents, theft, and damage. Drive with peace of mind knowing that we have you covered.</p>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="productItem">
-                        <img src="../resources/lifeInsurance.png" alt="Life Insurance" class="img-fluid">
-                        <h2>Life Insurance</h2>
-                        <p>Secure your family's future with our life insurance.</p>
+                    <div class="productItem card">
+                        <div class="card-front">
+                            <img src="../resources/lifeInsurance.png" alt="Life Insurance" class="img-fluid mb-2">
+                            <h2>Life Insurance</h2>
+                        </div>
+                        <div class="card-back">
+                            <p>Secure your family's financial future with our life insurance policies. We offer a variety of plans to suit your needs, ensuring that your loved ones are taken care of in the event of the unexpected.</p>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="productItem">
-                        <img src="../resources/Insurance2.png" alt="Home Insurance" class="img-fluid">
-                        <h2>Home Insurance</h2>
-                        <p>Protect your home from unexpected events.</p>
+                    <div class="productItem card">
+                        <div class="card-front">
+                            <img src="../resources/Insurance2.png" alt="Home Insurance" class="img-fluid mb-2">
+                            <h2>Home Insurance</h2>
+                        </div>
+                        <div class="card-back">
+                            <p>Protect your home from natural disasters, theft, and other unforeseen events. Our home insurance policies provide comprehensive coverage to keep your most valuable asset safe.</p>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="productItem">
-                        <img src="../resources/healthinsurance.png" alt="Health Insurance" class="img-fluid">
-                        <h2>Health Insurance</h2>
-                        <p>Comprehensive health coverage for you and your loved ones.</p>
+                    <div class="productItem card">
+                        <div class="card-front">
+                            <img src="../resources/healthinsurance.png" alt="Health Insurance" class="img-fluid mb-2">
+                            <h2>Health Insurance</h2>
+                        </div>
+                        <div class="card-back">
+                            <p>Comprehensive health coverage for you and your loved ones. Our health insurance plans cover a wide range of medical services, ensuring you get the care you need when you need it.</p>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="productItem">
-                        <img src="../resources/travelInsurance.png" alt="Travel Insurance" class="img-fluid">
-                        <h2>Travel Insurance</h2>
-                        <p>Travel with peace of mind with our travel insurance.</p>
+                    <div class="productItem card">
+                        <div class="card-front">
+                            <img src="../resources/travelInsurance.png" alt="Travel Insurance" class="img-fluid mb-2">
+                            <h2>Travel Insurance</h2>
+                        </div>
+                        <div class="card-back">
+                            <p>Travel with peace of mind with our comprehensive travel insurance. We offer coverage for medical emergencies, trip cancellations, lost luggage, and more, no matter where your adventures take you.</p>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="productItem">
-                        <img src="../resources/PetInsurance.png" alt="Pet Insurance" class="img-fluid">
-                        <h2>Pet Insurance</h2>
-                        <p>Keep your furry friends safe with our pet insurance.</p>
+                    <div class="productItem card">
+                        <div class="card-front">
+                            <img src="../resources/PetInsurance.png" alt="Pet Insurance" class="img-fluid mb-2">
+                            <h2>Pet Insurance</h2>
+                        </div>
+                        <div class="card-back">
+                            <p>Keep your furry friends safe with our pet insurance policies. We offer coverage for a variety of veterinary services, ensuring your pets get the best care possible.</p>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="productItem">
-                        <img src="../resources/businessInsurance.png" alt="Business Insurance" class="img-fluid">
-                        <h2>Business Insurance</h2>
-                        <p>Comprehensive protection for your business.</p>
+                    <div class="productItem card">
+                        <div class="card-front">
+                            <img src="../resources/businessInsurance.png" alt="Business Insurance" class="img-fluid mb-2">
+                            <h2>Business Insurance</h2>
+                        </div>
+                        <div class="card-back">
+                            <p>Comprehensive protection for your business. Our business insurance policies cover a wide range of risks, including property damage, liability, and employee protection, helping you run your business with confidence.</p>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="productItem">
-                        <img src="../resources/cyberInsurance.png" alt="Cyber Insurance" class="img-fluid">
-                        <h2>Cyber Insurance</h2>
-                        <p>Protect your data and assets from cyber threats.</p>
+                    <div class="productItem card">
+                        <div class="card-front">
+                            <img src="../resources/cyberInsurance.png" alt="Cyber Insurance" class="img-fluid mb-2">
+                            <h2>Cyber Insurance</h2>
+                        </div>
+                        <div class="card-back">
+                            <p>Protect your data and assets from cyber threats with our comprehensive cyber insurance policies. We offer coverage for data breaches, cyber attacks, and more, helping you safeguard your digital presence.</p>
+                        </div>
                     </div>
                 </div>        
-                <!-- Repeat the above div for each product -->
             </div>
         </section>
     </main>
@@ -134,7 +164,7 @@
                     <nav class="nav justify-content-center">
                         <a class="nav-link" href="../index.html">Home</a>
                         <a class="nav-link active" href="#">Our Products</a>
-                        <a class="nav-link" href="./aboutUs.html">About Us</a>
+                        <a class="nav-link" href="./aboutUs.html">About Me</a>
                         <a class="nav-link" href="./contactUs.html">Contact Me</a>
                         <a class="nav-link" href="./faq.html">FAQ</a>
                     </nav>

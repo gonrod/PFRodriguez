@@ -1,17 +1,16 @@
-/* Footer styling with some customization for Bootstrap */
+/* _footer.scss */
 footer {
-    background-color: $color-gray-dark;
-    color: $color-white;
-    padding: $padding;
-    font-size: 0.9em;
-    text-align: center;
-  
-    a {
-      color: $color-white;
-  
-      &:hover {
-        color: $color-blue-light;
-      }
+  background-color: $color-gray-dark; // Change to $color-gray-dark
+  color: $color-white; // Change to $color-white
+  padding: $padding; // Change to $padding
+  font-size: 0.9em;
+  text-align: center;
+  flex-shrink: 0;
+  a {
+    color: $color-white; // Change to $color-white
+    &:hover {
+      color: $color-blue-light; // Change to $color-blue-light
     }
   }
-  
+}
+/* End of _footer.scss */  
