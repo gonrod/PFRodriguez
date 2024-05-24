@@ -1,0 +1,40 @@
+// FAQ page styles
+.faqSection {
+  margin-top: rem(20);
+  text-align: center;
+
+  .faqList {
+    list-style: none;
+    padding: 0;
+
+    .faqCard {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: rem(8);
+      box-shadow: 0 rem(2) rem(4) rgba(0, 0, 0, 0.1);
+      padding: rem(20);
+      margin-bottom: rem(20);
+      text-align: left;
+      @include transition(transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out);
+
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 rem(6) rem(12) rgba(0, 0, 0, 0.1);
+      }
+
+      h3 {
+        margin-bottom: rem(10);
+      }
+
+      hr {
+        margin: rem(10) 0;
+        border: 0;
+        border-top: 1px solid #ddd;
+      }
+
+      p {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

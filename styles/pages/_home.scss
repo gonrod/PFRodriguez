@@ -1,0 +1,56 @@
+// _home.scss
+
+
+// Headline styling
+.headline {
+  margin: 1.2rem;
+}
+
+// Main video styles
+#main-video .row {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.videoWrapper {
+  position: relative;
+  overflow: hidden;
+  height: 50vh;
+  top: 0;
+  left: 0;
+
+  iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+  }
+}
+
+.featuredList {
+  img {
+      width: 100%;
+      max-width: 200px;
+      height: auto;
+      object-fit: cover;
+      margin-bottom: 10px;
+      transition: transform 0.3s ease-in-out; /* Add transition for scaling */
+      
+      &:hover {
+          transform: scale(1.05); /* Scale up on hover */
+      }
+  }
+
+  h2 {
+      font-size: 1.25rem;
+      margin: 10px 0;
+  }
+
+  p {
+      font-size: 1rem;
+      padding: 0 10px;
+  }
+}
+// End of _home.scss

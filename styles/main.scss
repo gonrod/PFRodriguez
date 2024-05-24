@@ -1,0 +1,21 @@
+// Import base styles
+@import 'utils/variables';
+@import 'utils/mixins';
+@import 'utils/functions';
+@import 'utils/fonts';
+@import 'base/reset';
+@import 'base/typography';
+
+// Import layout styles
+@import 'layout/header';
+@import 'layout/footer';
+
+// Import page-specific styles
+@import 'pages/home';
+@import 'pages/about';
+@import 'pages/contact';
+@import 'pages/faq';
+@import 'pages/products';
+
+// Import media queries
+@import 'layout/media-queries';
