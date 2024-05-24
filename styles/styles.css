@@ -1,305 +1,500 @@
 @font-face {
-  font-family: "Roboto";
-  src: url("../resources/fonts/Roboto-Regular.ttf");
-}
-* {
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: "Roboto", sans-serif;
-  color: #333;
-}
-
-a {
-  color: black;
-  font-weight: 600;
-  font-size: 1.2rem;
-  line-height: 2rem;
-  transition: color 0.3s ease-in-out;
-}
-a:hover {
-  color: #007bff;
-  text-decoration: underline;
-}
-
-h1 {
-  text-align: center;
-  font-size: 2.5rem;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  color: #007bff;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-  line-height: 1.2;
-}
-
-#header {
-  border-bottom: 1px solid #007bff;
-  padding-left: 0;
-  padding-right: 0;
-}
-#header .nav-link {
-  transition: color 0.3s ease-in-out;
-  margin-left: 8px;
-  margin-right: 8px;
-}
-#header .nav-link:hover {
-  transform: scale(1.1);
-}
-#header #logo img {
-  height: 50px;
-  width: auto;
-}
-
-/* _footer.scss */
-footer {
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
-  font-size: 0.9em;
-  text-align: center;
-  flex-shrink: 0;
-}
-footer a {
-  color: #fff;
-}
-footer a:hover {
-  color: #007bff;
-}
-
-/* End of _footer.scss */
-.headline {
-  margin: 1.2rem;
-}
-
-#main-video .row {
-  margin-right: 0;
-  margin-left: 0;
-}
-
-.videoWrapper {
-  position: relative;
-  overflow: hidden;
-  height: 50vh;
-  top: 0;
-  left: 0;
-}
-.videoWrapper iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
-}
-
-.featuredList img {
-  width: 100%;
-  max-width: 200px;
-  height: auto;
-  object-fit: cover;
-  margin-bottom: 10px;
-  transition: transform 0.3s ease-in-out; /* Add transition for scaling */
-}
-.featuredList img:hover {
-  transform: scale(1.05); /* Scale up on hover */
-}
-.featuredList h2 {
-  font-size: 1.25rem;
-  margin: 10px 0;
-}
-.featuredList p {
-  font-size: 1rem;
-  padding: 0 10px;
-}
-
-.aboutSection {
-  margin: 20px;
-  background: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-}
-.aboutSection .brokerImage {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  margin-bottom: 20px;
-}
-.aboutSection .storyContent h1 {
-  margin-bottom: 20px;
-}
-.aboutSection .storyContent h3 {
-  color: #333;
-  margin-top: 20px;
-  margin-bottom: 10px;
-}
-.aboutSection .storyContent h3:nth-child(n+1) {
-  margin-bottom: 1rem;
-}
-.aboutSection .storyContent p {
-  text-align: justify;
-  margin-bottom: 10px;
-}
-.aboutSection .storyContent a {
-  color: #007bff;
-  text-decoration: none;
-}
-.aboutSection .storyContent a:hover {
-  text-decoration: underline;
-}
-
-.contactSection {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 20px;
-}
-.contactSection h1 {
-  margin-bottom: 40px;
-}
-
-.contactText,
-.contactForm {
-  flex: 1;
-  padding: 20px;
-}
-
-.contactText {
-  background-color: #f9f9f9;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  margin: 20px;
-  line-height: 1.6;
-  color: #333;
-}
-.contactText h2 {
-  margin-bottom: 16px;
-}
-
-.contactForm {
-  max-width: 600px;
-}
-.contactForm label {
-  display: block;
-  margin-bottom: 5px;
-}
-.contactForm input[type=text],
-.contactForm input[type=email],
-.contactForm textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  transition: border-color 0.3s ease-in-out;
-}
-.contactForm input[type=text]:focus,
-.contactForm input[type=email]:focus,
-.contactForm textarea:focus {
-  border-color: #007bff;
-}
-.contactForm button[type=submit] {
-  background-color: #007bff;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
-}
-.contactForm button[type=submit]:hover {
-  background-color: #0056b3;
-}
-
-.faqSection {
-  margin-top: 1.25rem;
-  text-align: center;
-}
-.faqSection .faqList {
-  list-style: none;
-  padding: 0;
-}
-.faqSection .faqList .faqCard {
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 0.5rem;
-  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
-  padding: 1.25rem;
-  margin-bottom: 1.25rem;
-  text-align: left;
-  transition: transform 0.3s ease-in-out box-shadow 0.3s ease-in-out ease-in-out;
-}
-.faqSection .faqList .faqCard:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0.375rem 0.75rem rgba(0, 0, 0, 0.1);
-}
-.faqSection .faqList .faqCard h3 {
-  margin-bottom: 0.625rem;
-}
-.faqSection .faqList .faqCard hr {
-  margin: 0.625rem 0;
-  border: 0;
-  border-top: 1px solid #ddd;
-}
-.faqSection .faqList .faqCard p {
-  margin-bottom: 0;
-}
-
-.productsSection {
-  padding: 20px;
-}
-.productsSection .col-md-4 {
-  margin-bottom: 30px; /* Adjust the margin-bottom as needed */
-}
-.productsSection .equal-height-row {
-  display: flex;
-  flex-wrap: wrap;
-}
-.productsSection .productItem {
-  background: #fff;
-  border: 1px solid #ddd;
-  margin-bottom: 20px; /* Add margin between .productItem elements */
-  padding: 20px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  display: flex; /* Make .productItem a flex container */
-  flex-direction: column; /* Arrange child elements vertically */
-  justify-content: space-between; /* Align child elements vertically */
-  height: 100%; /* Ensure .productItem takes up full height */
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition for transform and box-shadow */
-}
-.productsSection .productItem:hover {
-  transform: translateY(-10px); /* Move up on hover */
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
-}
-.productsSection .productItem img {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: auto; /* Align image to the middle */
-}
-.productsSection .productItem h2 {
-  margin-top: auto; /* Align h2 to the bottom */
-}
-.productsSection .productItem p {
-  margin-top: 0; /* Remove default margin to avoid extra space */
-  margin-bottom: 0; /* Remove default margin to avoid extra space */
-}
-
-@media (max-width: 768px) {
-  #header > div {
+    font-family: "Roboto";
+    src: url("../resources/fonts/Roboto-Regular.ttf");
+  }
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  
+  html, body {
+    font-family: "Roboto", sans-serif;
+    color: #333;
+    height: 100%;
+  }
+  
+  a {
+    color: black;
+    font-weight: 600;
+    line-height: 2rem;
+    transition: color 0.3s ease-in-out;
+  }
+  a:hover {
+    color: #007bff;
+    text-decoration: underline;
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 2rem; /* Adjusted font size */
+    margin-top: 70px;
+    margin-bottom: 20px;
+    color: #007bff; /* Updated color for a fresh look */
+    font-weight: 700; /* Modernized font weight */
+    line-height: 1.2;
+    padding: 10px 0; /* Added padding for better spacing */
+    border-bottom: 2px solid #007bff; /* Added a bottom border for a modern touch */
+  }
+  
+  h2 {
+    font-size: 1.5rem; /* Reduced font size */
+    margin-bottom: 1rem; /* Adjusted margin for spacing */
+    color: #333; /* Ensure consistent color */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Subtle shadow for better readability */
+  }
+  
+  ul {
+    padding-left: 20px; /* Add left padding to ul */
+    list-style-type: disc; /* Use disc bullets */
+    margin-bottom: 20px; /* Add bottom margin to separate from other elements */
+  }
+  
+  li {
+    margin-bottom: 10px; /* Add space between list items */
+    line-height: 1.6; /* Improve readability with increased line height */
+    color: #333; /* Match text color with the rest of the content */
+  }
+  
+  /* General header styling */
+  #header {
+    border-bottom: 1px solid #007bff;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  #header .navbar {
+    padding: 0;
+  }
+  
+  #header .navbar-brand {
+    margin-right: 20px; /* Space between logo and nav links */
+  }
+  
+  #header .nav-link {
+    transition: color 0.3s ease-in-out;
+    padding: 10px 15px;
+  }
+  
+  #header .nav-item.active .nav-link {
+    color: #007bff; /* Use primary color for active menu item */
+  }
+  
+  #header .nav-link:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+  #header #logo img {
+    height: 50px;
+    width: auto;
+  }
+  
+  
+  .headline {
+    margin: 1.2rem;
+  }
+  
+  #main-video .row {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  
+  .videoWrapper {
+    position: relative;
+    overflow: hidden;
+    height: 50vh;
+    top: 0;
+    left: 0;
+  }
+  .videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  
+  .featuredList img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease-in-out; /* Add transition for scaling */
+  }
+  .featuredList img:hover {
+    transform: scale(1.05); /* Scale up on hover */
+  }
+  .featuredList h2 {
+    font-size: 1.25rem;
+    margin: 10px 0;
+  }
+  .featuredList p {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+  
+  .featuredList .card {
+    position: relative;
+    width: 100%;
+    max-width: 200px;
+    height: 300px;
+    margin: auto;
+    perspective: 1000px;
+    margin-bottom: 20px; 
+  }
+  
+  
+  .featuredList .card-front,
+  .featuredList .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transition: transform 0.6s ease-in-out;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .featuredList .card-front {
+    background: #fff;
+    display: flex;
     flex-direction: column;
-    align-items: stretch;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    transform: rotateY(0deg);
   }
-  #header #searchBar {
+  
+  .featuredList .card-back {
+    background: #007bff;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    text-align: center;
+    transform: rotateY(180deg);
+    cursor: pointer;
+  }
+  
+  .featuredList .card:hover .card-front {
+    transform: rotateY(-180deg);
+    cursor: pointer;
+  }
+  
+  .featuredList .card:hover .card-back {
+    transform: rotateY(0deg);
+    cursor: pointer;
+  }
+  
+  
+  .aboutSection {
+    margin: 20px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  .aboutSection .brokerImage {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  .aboutSection .storyContent h1 {
+    margin-bottom: 20px;
+  }
+  .aboutSection .storyContent h3 {
+    color: #333;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  .aboutSection .storyContent h3:nth-child(n+1) {
+    margin-bottom: 1rem;
+  }
+  .aboutSection .storyContent p {
+    text-align: justify;
+    margin-bottom: 10px;
+  }
+  .aboutSection .storyContent a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  .aboutSection .storyContent a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  
+  .contactSection {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .contactSection h1 {
+    margin-bottom: 40px;
+  }
+  
+  .contactText,
+  .contactForm {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .contactText {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    line-height: 1.6;
+    color: #333;
+  }
+  .contactText h2 {
+    margin-bottom: 16px;
+  }
+  
+  .contactForm {
+    max-width: 600px;
+  }
+  .contactForm label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  .contactForm input[type=text],
+  .contactForm input[type=email],
+  .contactForm textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease-in-out;
+  }
+  .contactForm input[type=text]:focus,
+  .contactForm input[type=email]:focus,
+  .contactForm textarea:focus {
+    border-color: #007bff;
+  }
+  .contactForm button[type=submit] {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  .contactForm button[type=submit]:hover {
+    background-color: #0056b3;
+  }
+  
+  .faqSection {
+    margin-top: 1.25rem;
+    text-align: center;
+  }
+  
+  .faqSection .faqList {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .faqSection .faqList .faqCard {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.25rem;
+    text-align: left;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  .faqSection .faqList .faqCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.375rem 0.75rem rgba(0, 0, 0, 0.1);
+  }
+  
+  .faqSection .faqList .faqCard .card-header {
+    cursor: pointer;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.3s ease;
+  }
+  
+  .faqSection .faqList .faqCard .card-header:hover {
+    background-color: #e9ecef;
+  }
+  
+  .faqSection .faqList .faqCard .card-header h3 {
+    margin: 0;
+    font-size: 1.25rem; /* Adjusted font size for better readability */
+    font-weight: 600; /* Slightly bold for emphasis */
+    color: #007bff; /* Matching the primary color theme */
+    transition: color 0.3s ease;
+  }
+  
+  .faqSection .faqList .faqCard .card-header:hover h3 {
+    color: #0056b3; /* Darker shade on hover for better visual feedback */
+  }
+  
+  .faqSection .faqList .faqCard .card-body {
+    padding: 1.25rem;
+  }
+  
+  .faqSection .faqList .faqCard .collapse.show .card-body {
+    border-top: 1px solid #ddd;
+  }
+  
+  .faqSection ul {
+    padding-left: 20px;
+    list-style-type: disc;
+  }
+  
+  .faqSection li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+  }
+  
+  .faqSection a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: normal; /* Ensure the font weight is normal to match surrounding text */
+    padding: 0; /* Remove any extra padding */
+    border: none; /* Remove border if any */
+    transition: color 0.3s ease;
+  }
+  
+  .faqSection a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+  }
+  
+  
+  
+  .productsSection .card {
+    position: relative;
+    width: 100%;
+    height: 350px; /* Increased height to accommodate longer descriptions */
+    margin: auto;
+    perspective: 1000px; /* Add perspective */
+    margin-bottom: 20px; /* Space between cards */
+    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+  }
+  
+  .productsSection .card-front,
+  .productsSection .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transition: transform 0.6s ease-in-out;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+    padding: 20px; /* Added padding to ensure content stays inside */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Center align text */
+  }
+  
+  .productsSection .card-front {
+    background: #fff;
+    z-index: 2;
+    transform: rotateY(0deg);
+  }
+  
+  .productsSection .card-back {
+    background: #007bff;
+    color: #fff;
+    transform: rotateY(180deg);
+  }
+  
+  .productsSection .card:hover .card-front {
+    transform: rotateY(-180deg);
+    cursor: pointer;
+  }
+  
+  .productsSection .card:hover .card-back {
+    transform: rotateY(0deg);
+  }
+  
+  .productsSection {
+    padding: 20px;
+  }
+  
+  .productsSection .col-md-4 {
+    margin-bottom: 30px; /* Adjust the margin-bottom as needed */
+  }
+  
+  .productsSection .equal-height-row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .productsSection .productItem {
+    background: #fff;
+    border: 1px solid #ddd;
+    margin-bottom: 20px; /* Add margin between .productItem elements */
+    padding: 0; /* Remove padding to integrate card structure */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    display: flex; /* Make .productItem a flex container */
+    flex-direction: column; /* Arrange child elements vertically */
+    justify-content: space-between; /* Align child elements vertically */
+    height: 350px; /* Increased height to accommodate longer descriptions */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition for transform and box-shadow */
+    position: relative;
+    perspective: 1000px; /* Add perspective for 3D effect */
+  }
+  
+  .productsSection .productItem:hover {
+    transform: translateY(-10px); /* Move up on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+  }
+  
+  .productsSection .productItem img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px; /* Add margin below image */
+  }
+  
+  .productsSection .productItem h2 {
+    font-size: 1.5rem; /* Reduce font size */
     margin-top: 10px;
-    width: 100%;
+    margin-bottom: 10px;
+    padding: 0 10px; /* Add padding for better spacing */
+    box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
   }
-  footer .nav-link {
-    width: 100%;
+  
+  .productsSection .productItem p {
+    margin-top: 0; /* Remove default margin to avoid extra space */
+    margin-bottom: 0; /* Remove default margin to avoid extra space */
+    padding: 10px; /* Add padding for better spacing */
+    box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
+    text-align: center; /* Center align text */
+    overflow: hidden; /* Ensure text does not overflow */
   }
-  .featuredList ul li {
-    flex-basis: calc(50% - 20px);
+  
+  @media (max-width: 768px) {
+  
+    h1 {
+      margin-top: 40px; /* Increased margin top for larger screens */
+    }
+  
+    #header > div {
+      flex-direction: column;
+      align-items: stretch;
+    }
+    #header #searchBar {
+      margin-top: 10px;
+      width: 100%;
+    }
+    footer .nav-link {
+      width: 100%;
+    }
+    .featuredList ul li {
+      flex-basis: calc(50% - 20px);
+    }
   }
-}
